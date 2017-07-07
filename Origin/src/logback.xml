@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<configuration>
+	<!-- Uncomment if you are using the logback plugin for eclipse <consolePlugin/> -->
+
+	<appender class="ch.qos.logback.core.ConsoleAppender" name="CONSOLE">
+		<encoder>
+			<pattern> [%thread] %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="FILE">
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+
+
+		<encoder>
+			<pattern> [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+
+	<logger name="org.springframework">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.apache">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.mongodb">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="io.netty">
+		<level value="ERROR" />
+	</logger>
+
+</configuration>
