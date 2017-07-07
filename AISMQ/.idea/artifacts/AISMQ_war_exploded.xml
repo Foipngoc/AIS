@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="AISMQ:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/AISMQ_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="AISMQ/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="AISMQ" />
+          <element id="dir-copy" path="$PROJECT_DIR$/config" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring" />
+          <element id="library" level="project" name="Spring MVC" />
+          <element id="library" level="project" name="commons-dbcp2-2.1.1" />
+          <element id="library" level="project" name="Hibernate" />
+          <element id="library" level="project" name="activemq-broker-5.14.3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 每个class对应一个持久化对象 -->
+<hibernate-mapping>
+	<class name="net.module.ShipInfo" table="shipinfo">
+		<id name="shipname" type="java.lang.String">
+			<column name="shipname" length="50" />
+			<generator class="assigned" />
+		</id>
+		<property name="longitude" column="longitude" type="double" />
+		<property name="latitude" column="latitude" type="double" />
+		<property name="speed" column="speed" type="double" />
+		<property name="cruisedirection" column="cruisedirection"
+			type="double" />
+		<property name="shipdirection" column="shipdirection" type="double" />
+		<property name="shipdate" column="shipdate" type="timestamp" />
+		<property name="ais" column="ais" type="java.lang.String"
+			length="20" />
+		<property name="gps" column="gps" type="java.lang.String"
+			length="20" />
+		<property name="messagetype" column="messagetype" type="integer" />
+		<property name="shiptype" column="shiptype" type="integer" />
+		<property name="adddate" column="adddate" type="timestamp" />
+	</class>
+</hibernate-mapping>
